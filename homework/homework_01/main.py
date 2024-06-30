@@ -15,7 +15,6 @@ def power_numbers(*number):
     for n in number:
         result.append(pow(n, 2))
     return result
-print(power_numbers(1, 2, 5, 7))
 
 # filter types
 ODD = "odd"
@@ -23,10 +22,12 @@ EVEN = "even"
 PRIME = "prime"
 
 def is_prime(number):
-    for i in range(2, (number//2)+1):
-        if number % i == 0:
-           return False
-    return True
+    if number % 2 == 0:
+        return number == 2
+    d = 3
+    while d * d <= number and number % d != 0:
+        d += 2
+    return d * d > number
 
 def filter_numbers(list_numbers, filter_type):
     """
