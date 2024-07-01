@@ -21,13 +21,14 @@ ODD = "odd"
 EVEN = "even"
 PRIME = "prime"
 
-def is_prime(number):
-    if number % 2 == 0:
-        return number == 2
-    d = 3
-    while d * d <= number and number % d != 0:
-        d += 2
-    return d * d > number
+def is_prime(a):
+    if a < 2:
+        return False
+    for i in range(2, int(a ** 0.5 + 1)):
+        if a % i == 0:
+            return False
+    else:
+        return True
 
 def filter_numbers(list_numbers, filter_type):
     """
