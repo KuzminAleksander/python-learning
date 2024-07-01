@@ -4,6 +4,11 @@
 """
 
 
+# filter types
+ODD = "odd"
+EVEN = "even"
+PRIME = "prime"
+
 def power_numbers(*number):
     """
     функция, которая принимает N целых чисел,
@@ -15,12 +20,7 @@ def power_numbers(*number):
     for n in number:
         result.append(pow(n, 2))
     return result
-
-# filter types
-ODD = "odd"
-EVEN = "even"
-PRIME = "prime"
-
+    
 def is_prime(a):
     if a < 2:
         return False
