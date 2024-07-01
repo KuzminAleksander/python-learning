@@ -20,6 +20,7 @@ def power_numbers(*number):
     for n in number:
         result.append(pow(n, 2))
     return result
+    
 def is_prime(a):
     if a < 2:
         return False
