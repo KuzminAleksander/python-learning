@@ -30,4 +30,3 @@ class Base:
 
 Base = declarative_base(cls=Base)
 
-
